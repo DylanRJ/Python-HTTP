@@ -1,5 +1,5 @@
 import requests
 
-def get_request():
-  r = requests.get('http://checkip.amazonaws.com/')
-  return(r.url)
+def get_request(url):
+  r = requests.get(url)
+  return r.url, r.status_code, int(r.headers['Content-Length'])
