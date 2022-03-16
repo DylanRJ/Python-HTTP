@@ -1,2 +1,2 @@
-def newMethod():
+def new_method():
   None
