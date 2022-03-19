@@ -14,16 +14,16 @@ import requests_mock
 
 ##Mock implementation tests with unittest
 
-def test_mock_get_request(): 
-  get_request_mock = Mock()
-  get_request_mock.get_request.return_value = {"URL": 'http://google.com/', "Status-code": 200, "Content-length": 15}
+# def test_mock_get_request(): 
+#   get_request_mock = Mock()
+#   get_request_mock.get_request.return_value = {"URL": 'http://google.com/', "Status-code": 200, "Content-length": 15}
 
-  assert get_request_mock.get_request()["URL"] == 'http://google.com/'
+#   assert get_request_mock.get_request()["URL"] == 'http://google.com/'
 
-def test_mock_create_json():
-  string = 'http://google.com/'
+# def test_mock_create_json():
+#   string = 'http://google.com/'
 
-  assert len(implementation.create_json(string)) == 1
+#   assert len(implementation.create_json(string)) == 1
 
 ##Mock implementation tests with requests_mock
 
