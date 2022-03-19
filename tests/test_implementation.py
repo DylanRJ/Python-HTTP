@@ -20,11 +20,6 @@ import requests_mock
 
 #   assert get_request_mock.get_request()["URL"] == 'http://google.com/'
 
-# def test_mock_create_json():
-#   string = 'http://google.com/'
-
-#   assert len(implementation.create_json(string)) == 1
-
 ##Mock implementation tests with requests_mock
 
 with requests_mock.Mocker() as mock:
@@ -34,3 +29,10 @@ with requests_mock.Mocker() as mock:
   assert resp.url == 'http://test.com/'
   assert resp.headers['Status-code'] == '200'
   assert resp.headers['Content-length'] == '15'
+
+def test_create_json():
+  string = 'http://google.com/'
+  longer_string = 'http://google.com/\nhttp://facebook.com\nhttp://amazon.com'
+
+  assert len(implementation.create_json(string)) == 1
+  assert len(implementation.create_json(longer_string)) == 3

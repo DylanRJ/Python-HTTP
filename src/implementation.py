@@ -6,4 +6,8 @@ def get_request(url):
   return custom_dictionary
 
 def create_json(string):
-  return [string]
+  websites = string.splitlines()
+  websites_array = []
+  for item in websites:
+    websites_array.append(item)
+  return websites_array
