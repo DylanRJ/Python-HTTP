@@ -30,9 +30,17 @@ with requests_mock.Mocker() as mock:
   assert resp.headers['Status-code'] == '200'
   assert resp.headers['Content-length'] == '15'
 
-def test_create_json():
+def test_create_json_array():
+
+  def create_json(string):
+    websites = string.splitlines()
+    websites_array = []
+    for item in websites:
+      websites_array.append(item)
+    return websites_array
+
   string = 'http://google.com/'
   longer_string = 'http://google.com/\nhttp://facebook.com\nhttp://amazon.com'
 
-  assert len(implementation.create_json(string)) == 1
-  assert len(implementation.create_json(longer_string)) == 3
+  assert len(create_json(string)) == 1
+  assert len(create_json(longer_string)) == 3
