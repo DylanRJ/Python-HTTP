@@ -1,5 +1,3 @@
-import src.implementation as implementation
-from unittest.mock import Mock
 import requests
 import requests_mock
 
