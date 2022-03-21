@@ -1,4 +1,13 @@
-# BBC Tech Test
+# Setup
+
+```sh
+$ git clone https://github.com/DylanRJ/Python-HTTP.git
+$ cd Python-HTTP
+$ pip install -r requirements.txt
+$ python3 src/implementation.py
+```
+
+# Tech Test
 
 The task is to write a program that makes HTTP requests and reports on certain properties of the responses it receives back.
 
